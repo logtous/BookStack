@@ -301,6 +301,7 @@ class TrashCan
         if ($entity->isA('shelf')) {
             return $this->destroyShelf($entity);
         }
+        return $this->destroyCommonRelations($entity) && 1;
     }
 
     /**
